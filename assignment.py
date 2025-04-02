@@ -31,8 +31,10 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
             exit()
-        # elif event.type == pygame.MOUSEBUTTONUP:
-        #     if
+    if event.type == pygame.MOUSEBUTTONDOWN and event.type != pygame.NOEVENT:
+        mouse_pos = event.dict["pos"]
+        print (mouse_pos)
+
    
     screen.blit(target_surface,(100,100))
 
