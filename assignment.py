@@ -13,3 +13,30 @@
 #   ...
 #   ...
 #-----------------------------------------------------------------------------
+import pygame
+
+
+pygame.init()
+screen = pygame.display.set_mode((1000,1000))
+pygame.display.set_caption("Game")
+clock = pygame.time.Clock()
+
+
+target_surface = pygame.Surface((100,100))
+target_surface.fill('Red')
+
+
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            exit()
+        # elif event.type == pygame.MOUSEBUTTONUP:
+        #     if
+   
+    screen.blit(target_surface,(100,100))
+
+
+    pygame.display.update
+    clock.tick(60)
+
