@@ -24,6 +24,9 @@ clock = pygame.time.Clock()
 
 target_surface = pygame.Surface((100,100))
 target_surface.fill('Red')
+target_x = 100
+target_y = 100
+target_surface_area = ((target_x,target_y),(target_x + 100,target_y + 100))
 
 
 while True:
@@ -33,12 +36,15 @@ while True:
             exit()
     if event.type == pygame.MOUSEBUTTONDOWN and event.type != pygame.NOEVENT:
         mouse_pos = event.dict["pos"]
-        print (mouse_pos)
+        if (mouse_pos)in target_surface_area:
+            print ("a")
+        else:
+            continue
 
    
-    screen.blit(target_surface,(100,100))
+    screen.blit(target_surface,(target_x, target_y))
 
 
-    pygame.display.update
+    pygame.display.update()
     clock.tick(60)
 
